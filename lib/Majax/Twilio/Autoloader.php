@@ -4,6 +4,8 @@ class Majax_Twilio_Autoloader
 {
     public static function register()
     {
+        require_once dirname(__FILE__).'/../../../vendor/twilio-php/Services/Twilio.php';
+
         spl_autoload_register(array('Majax_Twilio_Autoloader', 'autoload'));
     }
     public static function autoload($class_name)
